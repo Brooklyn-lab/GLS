@@ -4,15 +4,15 @@
       <div class="header__burger-wrapper">
         <a href="/best-antivirus.html" class="header__logo">
           <picture class="header__image">
-            <source type="image/webp" srcset="./img/logo.webp" media="(min-width: 768px)">
-            <source type="image/webp" srcset="./img/logo-768.webp" media="(max-width: 768px)">
-            <source srcset="./img/logo.png" media="(min-width: 768px)">
-            <img src="./img/logo-768.png" alt="Unicorn Pool Float">
+            <source type="image/webp" srcset="./img/" media="(min-width: 768px)">
+            <source type="image/webp" srcset="./img/" media="(max-width: 768px)">
+            <source srcset="./img/" media="(min-width: 768px)">
+            <img src="./img/" alt="">
           </picture>
         </a>
 
         <!-- Begin Header-Burger -->
-        
+
         <div class="icon-menu">
           <span></span>
           <span></span>
@@ -22,10 +22,25 @@
         <!-- End Header-Burger -->
       </div>
 
-      <nav class="header__navigation" id="navigation">
-        <ul class="header__wrapper">
-          <li class="header__item">
-            <a href="#" class="header__link @@if(link==0){active}"></a>
+      <nav class="header__navigation menu" id="navigation">
+        <ul class="menu__wrapper">
+          <li class="menu__item">
+            <a href="#" class="menu__link @@if(link==0){active}">Home</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Solutions</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Company</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Support</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link menu__link_user">Log In</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link menu__link_user">Sign Up</a>
           </li>
         </ul>
       </nav>

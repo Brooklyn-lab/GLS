@@ -104,3 +104,35 @@ body.lock {
 .content-padding-bottom {
   @include padding-bottom-section;
 }
+
+.main-wrapper {
+  background-image: url("/img/pik7.jpeg");
+  background-position: center;
+  min-height: 85vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.btn {
+  background-color: transparent;
+  border: 2px solid $white;
+  @include fonts(18px, 21px, 600);
+  transition: 0.3s;
+  height: 42px;
+  max-width: 220px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: $black;
+    background: $white;
+    transform: scale(1.03);
+  }
+}
