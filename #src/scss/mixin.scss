@@ -1,0 +1,157 @@
+$white: #fff;
+
+$black: #000;
+$black1: #1a1a1a;
+
+$blue: #412eae;
+
+//-----------------------------------
+
+$maxWidth: 1920;
+$maxWidthContainer: 1170px;
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+  $addSize: $startSize - $minSize;
+  @if $type==1 {
+    //Только если меньше контейнера
+    #{$property}: $startSize + px;
+    @media (max-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(
+        #{minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320})
+      );
+    }
+  } @else if $type==2 {
+    //Только если больше контейнера
+    #{$property}: $startSize + px;
+    @media (min-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(#{minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+    }
+  } @else {
+    //Всегда
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+}
+
+@mixin fonts($font-size, $line-height, $font-weight) {
+  font-size: $font-size;
+  line-height: $line-height / $font-size * 100%;
+  font-weight: $font-weight;
+}
+
+@mixin transition($transition) {
+  transition: opacity $transition ease;
+  opacity: 1;
+  transition-delay: $transition;
+  will-change: transform;
+}
+
+//---------- подключение шрифтов -------------
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@mixin title {
+  @include fonts(48px, 58px, 700);
+  color: #1a1a1a;
+
+  @media screen and (max-width: 568px) {
+    font-size: 41px;
+    line-height: 51px;
+  }
+}
+
+@mixin subtitle {
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 24px;
+  color: #909090;
+
+  @media screen and (max-width: 568px) {
+    font-size: 22px;
+    line-height: 20px;
+  }
+}
+
+@mixin content-text {
+  @include fonts(18px, 27px, 300);
+  color: #1a1a1a;
+
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+@mixin content-title {
+  @include fonts(48px, 58px, 700);
+  color: #1a1a1a;
+
+  @media screen and (max-width: 768px) {
+    font-size: 44px;
+    line-height: 55px;
+  }
+
+  @media screen and (max-width: 576px) {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  span {
+    color: $blue;
+  }
+}
+
+@mixin padding-section {
+  padding: 160px 0;
+
+  @media screen and (max-width: 992px) {
+    padding: 100px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 80px 0;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 60px 0;
+  }
+}
+
+@mixin padding-bottom-section {
+  padding: 0 0 160px 0;
+
+  @media screen and (max-width: 992px) {
+    padding: 0 0 120px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 0 80px 0;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 0 0 60px 0;
+  }
+}
+
+@mixin button-hover {
+  &:hover,
+  &:focus {
+    transition: 0.25s ease-in-out;
+    background: $blue;
+    color: #fff;
+
+    span {
+      color: #fff;
+    }
+    svg {
+      stroke: #fff;
+    }
+  }
+}
