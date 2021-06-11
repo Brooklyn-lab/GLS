@@ -1,0 +1,19 @@
+.preview {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 50px 0 30px;
+
+   &__text {
+      @include fonts(19px, 30px, 500);
+      margin-bottom: 10px;
+   }
+
+   &__title {
+      @include fonts(40px, 56px, 700);
+   }
+
+   &__btn {
+      margin: 35px 0;
+   }
+}

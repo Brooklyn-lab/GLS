@@ -30,6 +30,18 @@ jQuery(document).ready(function () {
       allMobailNavClasses.toggleClass('active');
    });
 
+   // ---------------------------------------------------
+
+   $(window).scroll(function () {
+      let height = $(window).scrollTop();
+
+      if (height > 124) {
+         $('.header').addClass('active');
+      } else {
+         $('.header').removeClass('active');
+      }
+   });
+
    // ------------------- Popaps ---------------
 
    // Skroll popup-footer
@@ -119,5 +131,17 @@ jQuery(document).ready(function () {
          }
       }
    });
+
+   $('#steps-slider').slick({
+      dots: true,
+      arrow: true,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear',
+      adaptiveHeight: true,
+      infinite: false,
+   });
+
 });
 

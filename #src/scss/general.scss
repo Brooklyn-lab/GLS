@@ -12,7 +12,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  color: #000;
+  color: $white;
   scroll-behavior: smooth;
   z-index: 1;
 }
@@ -76,6 +76,8 @@ $md4: 479.98;
 .container {
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
+  width: 100%;
+
   @media (max-width: $md1+px) {
     max-width: 970px;
   }
@@ -113,6 +115,10 @@ body.lock {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .btn {
@@ -133,6 +139,5 @@ body.lock {
   &:focus {
     color: $black;
     background: $white;
-    transform: scale(1.03);
   }
 }

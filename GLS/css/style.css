@@ -51,7 +51,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #000;
+  color: #fff;
   scroll-behavior: smooth;
   z-index: 1;
 }
@@ -107,6 +107,7 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 
 body.lock {
@@ -147,6 +148,16 @@ body.lock {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .btn {
@@ -178,9 +189,6 @@ body.lock {
 .btn:focus {
   color: #000;
   background: #fff;
-  -webkit-transform: scale(1.03);
-      -ms-transform: scale(1.03);
-          transform: scale(1.03);
 }
 
 .preloader {
@@ -477,7 +485,19 @@ body.lock {
 }
 
 .header {
-  padding: 35px 0 40px;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 100;
+}
+
+.header.active {
+  background: #ffffff7d;
+  -webkit-transition: background 0.2s ease-out;
+  -o-transition: background 0.2s ease-out;
+  transition: background 0.2s ease-out;
 }
 
 .header__body {
@@ -494,6 +514,10 @@ body.lock {
 
 .header__logo {
   margin-right: 15px;
+  font-size: 35px;
+  line-height: 142.85714%;
+  font-weight: 700;
+  color: #fff;
 }
 
 .header__burger-wrapper {
@@ -519,7 +543,6 @@ body.lock {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 0;
 }
 
 .menu__wrapper.active {
@@ -527,7 +550,6 @@ body.lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
 }
 
 .menu__item:not(:last-child) {
@@ -610,6 +632,20 @@ body.lock {
   opacity: 0;
 }
 
+.menu__link_user {
+  border: 1px solid #fff;
+  padding: 8px 28px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.menu__link_user:focus,
+.menu__link_user:hover {
+  color: #000;
+  background: #fff;
+}
+
 .menu__link_user::after {
   display: none;
 }
@@ -636,6 +672,224 @@ body.lock {
 
 .icon-menu {
   display: none;
+}
+
+.preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 0 30px;
+}
+
+.preview__text {
+  font-size: 19px;
+  line-height: 157.89474%;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.preview__title {
+  font-size: 40px;
+  line-height: 140%;
+  font-weight: 700;
+}
+
+.preview__btn {
+  margin: 35px 0;
+}
+
+.technology {
+  padding: 100px 0;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 -15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card {
+  max-width: 450px;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  margin: 0 15px 25px;
+}
+
+.card__front,
+.card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #777;
+}
+
+.card__front-title {
+  margin: 20px 0 8px;
+}
+
+.card__back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card__back-text {
+  margin: 10px 0 20px;
+}
+
+.card:hover .card__front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card:hover .card__back {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.steps {
+  padding: 100px 0;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.slider {
+  color: #000;
+  min-width: 0;
+  position: relative;
+  padding: 0 50px;
+}
+
+.slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider__text {
+  margin: 0 15px 0 0;
+}
+
+.slider__image {
+  margin: 0 0 0 15px;
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: -30px 0px 0px 0px;
+  z-index: 10;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+.slider .slick-arrow.slick-prev {
+  left: 0;
+}
+
+.slider .slick-arrow.slick-next {
+  right: 0;
+}
+
+.slider .slick-arrow.slick-disabled {
+  opacity: 0.2;
+}
+
+.slider .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider .slick-dots li {
+  list-style: none;
+}
+
+.slider .slick-dots li:not(:last-child) {
+  margin-right: 5px;
+}
+
+.slider .slick-dots button {
+  cursor: pointer;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.slider .slick-dots li.slick-active button {
+  background: transparent;
+  border: 1px solid #000;
+}
+
+@media screen and (min-width: 768px) {
+  .slider__text,
+  .slider__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
 }
 
 @media (max-width: 1212px) {
@@ -823,6 +1077,16 @@ body.lock {
   .container {
     max-width: none;
     padding: 0 10px;
+  }
+}
+
+@media (max-width: 767.98) {
+  .cards {
+    margin: 0 auto;
+  }
+
+  .card {
+    margin: 0 auto 25px;
   }
 }
 
