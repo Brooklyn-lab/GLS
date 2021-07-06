@@ -1,0 +1,79 @@
+.resons {
+   &__body {
+      margin-top: 95px;
+
+      @media screen and (max-width: 768px) {
+         margin-top: 60px;
+      }
+
+      @media screen and (max-width: 576px) {
+         margin-top: 50px;
+      }
+   }
+
+   &__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 70px;
+
+      @media screen and (max-width: 768px) {
+         flex-direction: column;
+      }
+
+      &:nth-child(2n) {
+         flex-direction: row-reverse;
+
+         @media screen and (max-width: 768px) {
+            flex-direction: column;
+         }
+
+         .resons__image {
+            margin: 0 0 0 20px;
+
+            @media screen and (max-width: 768px) {
+               margin: 0 0 24px 0;
+            }
+         }
+      }
+   }
+
+   &__image {
+      max-width: 468px;
+      width: 100%;
+      height: auto;
+      margin-right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media screen and (max-width: 768px) {
+         margin: 0 0 24px 0;
+      }
+   }
+
+   &__content {
+      width: 100%;
+      max-width: 700px;
+   }
+
+   &__title {
+      @include content-title;
+      margin-bottom: 15px;
+   }
+
+   &__text {
+      @include content-text;
+   }
+}
+
+.footbol-content {
+   width: 100%;
+   position: relative;
+
+   img {
+      width: 100%;
+      height: auto;
+      display: block;
+   }
+}

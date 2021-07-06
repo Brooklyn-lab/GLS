@@ -1,0 +1,44 @@
+.cta {
+   background-image: url("../img/home/fullscreen2.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+
+   @media screen and (max-width: 768px) {
+      background-image: url("../img/home/fullscreen2-768.jpg");
+   }
+
+   @media screen and (max-width: 576px) {
+      background-image: url("../img/home/fullscreen2-576.jpg");
+   }
+
+   &__title {
+      color: $white1;
+      margin-bottom: 55px;
+
+      @media screen and (max-width: 768px) {
+         margin-bottom: 24px;
+      }
+
+      @media screen and (max-width: 576px) {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__button {
+      @include button;
+      @include height;
+      display: flex;
+      margin: 0 auto;
+      max-width: 357px;
+      background: $white1;
+
+      @media screen and (max-width: 768px) {
+         max-width: 250px;
+      }
+
+      @media screen and (max-width: 576px) {
+         max-width: 186px;
+      }
+   }
+}

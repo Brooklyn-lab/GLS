@@ -172,9 +172,9 @@ gulp.task('otf2ttf', function () {
 });
 
 function fontsStyle(params) {
-  let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
+  let file_content = fs.readFileSync(source_folder + '/scss/general/fonts.scss');
   if (file_content == '') {
-    fs.writeFile(source_folder + '/scss/fonts.scss', '', cb);
+    fs.writeFile(source_folder + '/scss/general/fonts.scss', '', cb);
     return fs.readdir(path.build.fonts, function (err, items) {
       if (items) {
         let c_fontname;
@@ -183,7 +183,7 @@ function fontsStyle(params) {
           fontname = fontname[0];
           if (c_fontname != fontname) {
             fs.appendFile(
-              source_folder + '/scss/fonts.scss',
+              source_folder + '/scss/general/fonts.scss',
               '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n',
               cb,
             );

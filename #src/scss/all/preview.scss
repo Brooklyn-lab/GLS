@@ -1,0 +1,148 @@
+.main-wrapper {
+   background-image: url("../img/home/fullscreen1.jpg");
+   background-position: center;
+   min-height: 100vh;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+   @media screen and (max-width: 768px) {
+      background-image: url("../img/home/fullscreen1-768.jpg");
+      min-height: initial;
+   }
+
+   @media screen and (max-width: 576px) {
+      background-image: url("../img/home/fullscreen1-576.jpg");
+   }
+}
+
+.solution {
+   background-image: url("../img/solution/fullscreen1.jpg");
+
+   @media screen and (max-width: 768px) {
+      background-image: url("../img/solution/fullscreen1-768.jpg");
+   }
+
+   @media screen and (max-width: 576px) {
+      background-image: url("../img/solution/fullscreen1-576.jpg");
+   }
+}
+
+.support {
+   background-image: url("../img/support/fullscreen1.jpg");
+
+   @media screen and (max-width: 768px) {
+      background-image: url("../img/support/fullscreen1-768.jpg");
+   }
+
+   @media screen and (max-width: 576px) {
+      background-image: url("../img/support/fullscreen1-576.jpg");
+   }
+}
+
+.company {
+   background-image: url("../img/company/fullscreen1.jpg");
+
+   @media screen and (max-width: 768px) {
+      background-image: url("../img/company/fullscreen1-768.jpg");
+   }
+
+   @media screen and (max-width: 576px) {
+      background-image: url("../img/company/fullscreen1-576.jpg");
+   }
+}
+
+.preview {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 50px 0 30px;
+
+   @media screen and (max-width: 768px) {
+      margin: 100px 0;
+   }
+
+   &__body {
+      max-width: 724px;
+
+      @media screen and (max-width: 576px) {
+         max-width: 235px;
+      }
+   }
+
+   &__text {
+      @include main-subtitle;
+      margin-bottom: 10px;
+   }
+
+   &__title {
+      @include main-title;
+   }
+
+   &__btn {
+      @include button;
+      @include height;
+      max-width: 357px;
+      color: $blue;
+      background: transparent;
+      border: 2px solid $blue;
+      margin: 35px 0;
+
+      @media screen and (max-width: 768px) {
+         max-width: 250px;
+      }
+
+      @media screen and (max-width: 576px) {
+         max-width: 186px;
+      }
+   }
+}
+
+.support-preview {
+   @media screen and (max-width: 768px) {
+      margin: 171px 0;
+   }
+}
+
+.solution-preview {
+   &__title {
+      @include content-title;
+      margin-bottom: 15px;
+   }
+
+   &__text {
+      @include content-text;
+
+      @media screen and (max-width: 768px) {
+         margin-bottom: 15px;
+
+         &_items {
+            padding-left: 24px;
+            position: relative;
+
+            &::after {
+               position: absolute;
+               content: "";
+               width: 8px;
+               height: 8px;
+               background: $blue;
+               left: 0;
+               top: 6px;
+               border-radius: 50%;
+            }
+         }
+      }
+   }
+
+   &__btn {
+      max-width: 427px;
+
+      @media screen and (max-width: 576px) {
+         max-width: 250px;
+      }
+   }
+}

@@ -1,7 +1,6 @@
 {
   "name": "new-project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,5 +28,15 @@
     "gulp-webp-html": "^1.0.2",
     "gulp-webpcss": "^1.1.1",
     "webp-converter": "^2.2.3"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brooklyn-lab/GLS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Brooklyn-lab/GLS/issues"
+  },
+  "homepage": "https://github.com/Brooklyn-lab/GLS#readme",
+  "description": ""
 }

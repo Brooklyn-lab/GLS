@@ -1,0 +1,54 @@
+.about-us {
+   background: $gray;
+   padding-bottom: 90px;
+
+   @media screen and (max-width: 768px) {
+      padding-bottom: 38px;
+   }
+
+   @media screen and (max-width: 576px) {
+       padding-bottom: 10px;
+   }
+
+   &__body {
+      position: relative;
+      background: $white1;
+      box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+      padding: 60px 15px 100px;
+      top: -70px;
+
+      @media screen and (max-width: 576px) {
+         top: -32px;
+         padding: 30px 10px;
+      }
+   }
+
+   &__content {
+      max-width: 910px;
+      margin: 45px auto 0;
+
+      @media screen and (max-width: 768px) {
+         margin-top: 24px;
+      }
+
+      @media screen and (max-width: 576px) {
+         margin-top: 15px;
+      }
+   }
+
+   &__text {
+      @include content-text;
+
+      &:not(:last-child) {
+         margin-bottom: 30px;
+
+         @media screen and (max-width: 768px) {
+            margin-bottom: 24px;
+         }
+      }
+   }
+
+   &__company {
+      color: $blue;
+   }
+}
