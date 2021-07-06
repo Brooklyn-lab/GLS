@@ -1021,9 +1021,9 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .slider {
@@ -1462,8 +1462,11 @@ body.lock {
   border-right: 10px solid transparent;
   border-bottom: 20px solid #c4c4c4;
   right: 25px;
-  top: 38%;
+  top: 39%;
   z-index: 2;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .form__select-wrapper {
@@ -1532,6 +1535,7 @@ body.lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 -15px;
 }
 
 .form__textarea {
@@ -1592,14 +1596,15 @@ body.lock {
 }
 
 .select.active .form__select-btn::before {
-  -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-  top: 42%;
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+  top: 39%;
 }
 
 .select {
   position: relative;
+  margin: 0 0 35px;
 }
 
 .select__header {
@@ -1610,6 +1615,11 @@ body.lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+}
+
+label#skype {
+  padding: 0 0 0 15px;
 }
 
 .about-us {
@@ -2838,7 +2848,7 @@ body.lock {
   }
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 648px) {
   .form__input-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2857,6 +2867,14 @@ body.lock {
 
   .form__wrapper {
     width: 100%;
+  }
+
+  .form__textarea-wrapper {
+    margin: 0;
+  }
+
+  label#skype {
+    padding: 0;
   }
 }
 
