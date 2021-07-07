@@ -202,7 +202,7 @@ jQuery(document).ready(function () {
          <li class='solution-preview__text solution-preview__text_items'>Dedicated target</li>
          <li class='solution-preview__text solution-preview__text_items'>Motivated consumers</li>
       </ul>
-      <a href="#" class="preview__btn btn solution-preview__btn"><span>Create a Free Buyer Account</span></a>
+      <a href="./support.html" class="preview__btn btn solution-preview__btn"><span>Create a Free Buyer Account</span></a>
    `
 
    const prevTitle = $('.solution-preview__body');
