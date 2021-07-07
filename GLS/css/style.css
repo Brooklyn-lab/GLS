@@ -783,11 +783,11 @@ body.lock {
   background-image: url("../img/solution/fullscreen1.jpg");
 }
 
-.support {
+.company {
   background-image: url("../img/support/fullscreen1.jpg");
 }
 
-.company {
+.support {
   background-image: url("../img/company/fullscreen1.jpg");
 }
 
@@ -2312,11 +2312,11 @@ label#skype {
     background-image: url("../img/solution/fullscreen1-768.jpg");
   }
 
-  .support {
+  .company {
     background-image: url("../img/support/fullscreen1-768.jpg");
   }
 
-  .company {
+  .support {
     background-image: url("../img/company/fullscreen1-768.jpg");
   }
 
@@ -2953,11 +2953,11 @@ label#skype {
     background-image: url("../img/solution/fullscreen1-576.jpg");
   }
 
-  .support {
+  .company {
     background-image: url("../img/support/fullscreen1-576.jpg");
   }
 
-  .company {
+  .support {
     background-image: url("../img/company/fullscreen1-576.jpg");
   }
 
@@ -3125,9 +3125,9 @@ label#skype {
 
 .webp .solution { background-image: url(../img/solution/fullscreen1.webp); }
 
-.webp .support { background-image: url(../img/support/fullscreen1.webp); }
+.webp .company { background-image: url(../img/support/fullscreen1.webp); }
 
-.webp .company { background-image: url(../img/company/fullscreen1.webp); }
+.webp .support { background-image: url(../img/company/fullscreen1.webp); }
 
 .webp .cta { background-image: url(../img/home/fullscreen2.webp); }
 
@@ -3145,12 +3145,12 @@ label#skype {
 
 @media screen and (max-width: 768px) {
 
-  .webp .support { background-image: url(../img/support/fullscreen1-768.webp); }
+  .webp .company { background-image: url(../img/support/fullscreen1-768.webp); }
 }
 
 @media screen and (max-width: 768px) {
 
-  .webp .company { background-image: url(../img/company/fullscreen1-768.webp); }
+  .webp .support { background-image: url(../img/company/fullscreen1-768.webp); }
 }
 
 @media screen and (max-width: 768px) {
@@ -3170,12 +3170,12 @@ label#skype {
 
 @media screen and (max-width: 576px) {
 
-  .webp .support { background-image: url(../img/support/fullscreen1-576.webp); }
+  .webp .company { background-image: url(../img/support/fullscreen1-576.webp); }
 }
 
 @media screen and (max-width: 576px) {
 
-  .webp .company { background-image: url(../img/company/fullscreen1-576.webp); }
+  .webp .support { background-image: url(../img/company/fullscreen1-576.webp); }
 }
 
 @media screen and (max-width: 576px) {
