@@ -38,6 +38,21 @@
   }
 }
 
+.logo-svg {
+  width: 202px;
+  height: 93px;
+
+  @media screen and (max-width: 768px) {
+    width: 130px;
+    height: 75px; 
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 70px;
+    height: 40px;
+  }
+}
+
 .menu {
   @media screen and (max-width: 768px) {
     display: block;

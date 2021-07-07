@@ -397,6 +397,11 @@ input[type="checkbox"]:checked + .checkbox__box {
           align-items: center;
 }
 
+.logo-svg {
+  width: 202px;
+  height: 93px;
+}
+
 .menu__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1988,6 +1993,11 @@ label#skype {
     width: 100%;
   }
 
+  .logo-svg {
+    width: 130px;
+    height: 75px;
+  }
+
   .menu {
     display: block;
     position: fixed;
@@ -2569,6 +2579,11 @@ label#skype {
 
   .title {
     font-size: 26px;
+  }
+
+  .logo-svg {
+    width: 70px;
+    height: 40px;
   }
 
   .menu {
