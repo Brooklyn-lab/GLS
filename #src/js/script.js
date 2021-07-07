@@ -27,6 +27,7 @@ jQuery(document).ready(function () {
       const skype = document.querySelector('#skype');
       let selectHeader = document.querySelectorAll('.select__header');
       let selectIrem = document.querySelectorAll('.form__select');
+      let selectWrapper = document.querySelector('.form__select-wrapper');
 
       selectHeader.forEach(item => {
          item.addEventListener('click', function () {
@@ -58,7 +59,15 @@ jQuery(document).ready(function () {
 
    select();
 
-   //Валидация и отправка формы
+   $(document).mouseup(function (e) { // событие клика по веб-документу
+      var div = $('.select'); // тут указываем класс элемента
+      if (!div.is(e.target) // если клик был не по нашему блоку
+         && div.has(e.target).length === 0) { // и не по его дочерним элементам
+         div.removeClass('active'); // скрываем его
+      }
+   });
+
+   //---------- Form validation and submission
 
    $('[data-submit]').on('click', function (e) {
       e.preventDefault();
@@ -74,7 +83,8 @@ jQuery(document).ready(function () {
       "Please check your input."
    );
 
-   // Функция валидации и вывода сообщений
+   // -------Validation and message output function
+
    function valEl(el) {
 
       el.validate({

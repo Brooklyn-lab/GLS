@@ -58,19 +58,6 @@ img {
   height: auto;
 }
 
-.animate-hidden {
-  transition: transform 0.3s ease, opacity 0.5s ease;
-  opacity: 0;
-  transition-delay: 0.2s;
-  will-change: transform;
-
-  &.not-in-view {
-    opacity: 1;
-    transform: translateY(50px);
-    // transition: none;
-  }
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus input:-webkit-autofill,
@@ -155,14 +142,6 @@ input[type="checkbox"]:checked + .checkbox__box {
   background: url("../img/check.png") no-repeat center;
 }
 
-// .container {
-//   max-width: 1230px;
-//   min-width: 290px;
-//   padding: 0 15px;
-//   width: 100%;
-//   margin: 0 auto;
-// }
-
 $minWidth: 320px;
 $maxWidth: 1920;
 $maxWidthContainer: 1200;
@@ -193,19 +172,6 @@ $md4: 479.98;
   }
 }
 
-body.lock {
-  overflow: hidden;
-}
-
-// .content-text {
-//   @include content-text;
-// }
-// .content-title {
-//   @include content-title;
-// }
-// .content-padding {
-//   @include padding-section;
-// }
 .content-padding {
   @include content-padding;
 }
